@@ -33,16 +33,24 @@
             color: #FF6600;
         }
 
-        .navbar-custom .dropdown-menu .nav-link:hover,
-        .navbar-custom .dropdown-menu .nav-link:focus {
-            background-color: #FF6600; /* Orange background */
-            color: white; /* White text for better visibility */
-        }
-
-        .navbar-custom .dropdown-menu .nav-link.active {
+        .navbar-custom .dropdown-menu .dropdown-item:hover,
+        .navbar-custom .dropdown-menu .dropdown-item:focus {
             background-color: #FF6600; /* Orange background */
             color: white; /* White text */
         }
+
+        .navbar-custom .dropdown-menu .dropdown-item {
+            color: white; /* Ensures text is initially white */
+        }
+ 
+         .navbar-custom .dropdown-menu .dropdown-item.active {
+            background-color: #FF6600; /* Orange background */
+            color: white; /* White text */
+        }
+
+.navbar-custom .dropdown-menu {
+    background-color: #007BA7; /* Consistent with the navbar color */
+}
 
         .hero-section {
             background: url('images/SIBP-Background.png') no-repeat center center / cover;
