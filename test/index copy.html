@@ -136,38 +136,18 @@
     }
 
     /* Update gif-column to ensure the column is square */
-<!-- .gif-column { 
+.gif-column {
   width: 250px; /* Set a specific width */
   height: 250px; /* Set the same height to make it square */
   text-align: center;
   vertical-align: middle;
-} -->
-
-gif-column {
-  display: flex;
-  justify-content: center;  /* Horizontally center */
-  align-items: center;      /* Vertically center */
-  min-height: 300px;        /* Adjust height as needed */
 }
+
 .gif-column img {
   width: 100%; /* Make the image fill the container's width */
   height: 100%; /* Make the image fill the container's height */
-  object-fit: contain; /* Ensure the image covers the container while maintaining its aspect ratio */
+  object-fit: cover; /* Ensure the image covers the container while maintaining its aspect ratio */
   transition: all 0.3s ease; /* Smooth transition effect */
-}
-/* Ensure the text column content is vertically centered */
-.text-column {
-  display: flex;
-  align-items: center;  /* Vertically centers the bullet points */
-  justify-content: left;  /* Optional: Centers text horizontally */
-  height: 100%;  /* Ensures it takes up full row height */
-}
-
-/* Ensure bullets are spaced properly */
-.text-column ul {
-  padding: 0;
-  margin: 0;
-  list-style-position: inside; /* Ensures bullets align well */
 }
   </style>
 </head>
@@ -238,8 +218,8 @@ gif-column {
       <p>Hover over each bullet to see details</p>
       <table class="table table-bordered">
         <colgroup>
-          <col style="width: 40%;"> <!-- Adjust first column width -->
-          <col style="width: 60%;"> <!-- Adjust second column width -->
+          <col style="width: 50%;"> <!-- Adjust first column width -->
+          <col style="width: 50%;"> <!-- Adjust second column width -->
         </colgroup>
         <!--<thead>
           <tr>
@@ -249,7 +229,7 @@ gif-column {
         </thead> -->
         <tbody>
           <tr>
-            <td class="text-column">
+            <td>
               <ul class="bullet-list">
                 <li><span class="hover-word" data-text="SIBP is more than just a planning discipline—it’s a dynamic management framework that evolves with your organisation’s needs. This approach provides a single, cohesive view across all business functions, enabling your business to operate with a single set of numbers. It allows organisations to pivot quickly while maintaining alignment across all functions, helping them navigate disruptions and complexity with confidence." data-gif="images/DynamicFramework.gif">Dynamic Framework</span></li>
                 <li><span class="hover-word" data-text="Finance and workforce management cuts across all other functional capabilities, emphasising their critical role in underpinning and interlinking every aspect of business planning. By integrating finance, we ensure that cash flow planning and financial resource allocation are aligned with both immediate operational needs and long-term strategic goals, enhancing overall financial agility and health." data-gif="images/IntegratesFinanceAndWorkforce.gif">Finance & Workforce Integration</span></li>
