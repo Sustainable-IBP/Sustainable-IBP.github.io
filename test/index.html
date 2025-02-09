@@ -107,11 +107,24 @@
         font-size: 1.2em; /* Adjust the value to make it slightly smaller than h3 */
         }
 
-    @media (max-width: 768px) {
-      .navbar-text {
-        font-size: 1.2rem; /* Smaller font size on smaller screens */
-      }
-    }
+   /* 🔹 Mobile Adjustments */
+@media (max-width: 768px) {
+  .gif-column {
+    display: block; /* Stack below text on mobile */
+    width: 100%; /* Take full width */
+    text-align: center; /* Keep centered */
+  }
+
+  .gif-column img {
+    max-width: 80%; /* Prevents excessive shrinking */
+    max-height: 250px; /* Keeps a reasonable size */
+  }
+
+  .text-column {
+    display: block; /* Stack text above image */
+    width: 100%;
+  }
+}
 
     .aubergine-section {
       background-color: #726E75; /* Grey with aubergine undertones */
