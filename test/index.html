@@ -170,6 +170,25 @@
   padding-left: 20px; /* Adds indentation */
   list-style-type: disc; /* Standard bullet points */
 }
+
+/* Custom Orange Button */
+.custom-orange-btn {
+    background-color: #FF6600;  /* Replace with your orange accent */
+    color: white;               /* White text */
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.custom-orange-btn:hover,
+.custom-orange-btn:focus {
+    background-color: #cc5200; /* Slightly darker orange on hover */
+    color: white;
+    text-decoration: none;
+}
   </style>
 </head>
 <body>
@@ -370,7 +389,14 @@
   <section id="resources" class="bg-light">
     <div class="container">
       <h2>Resources</h2>
-      <p>Explore our wide range of resources to understand more about sustainable IBP.</p>
+      <!-- Executive Assessment Tool Download -->
+      <div class="download-section text-center mt-4">
+        <h4>Download the Executive Assessment Tool</h4>
+        <p>This is a quick self asssessment -  please get in touch for a more detailed diagnostic</p>
+        <a href="downloads/SIBP Exec Assessment 250203.xlsx" class="btn custom-orange-btn btn-lg" download>
+            <i class="fas fa-file-excel"></i> Download Now
+        </a>
+    </div>
     </div>
   </section>
 
@@ -379,6 +405,13 @@
       <h2>Contact Us</h2>
       <p>Have any questions? Reach out to us through the following ways.</p>
       <!-- You can add a contact form or other contact details here -->
+       <p></p>
+       <p></p>
+       <div class="col-lg-8 col-lg-offset-2 text-center">
+				<a href=" https://www.linkedin.com/showcase/sustainable-ibp/" target="_blank">
+  				      <img src="images/linkedin.png" alt="LinkedIn" />
+				</a>
+				</div>
     </div>
   </section>
 
