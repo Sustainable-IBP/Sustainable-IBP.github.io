@@ -150,8 +150,10 @@ gif-column {
   min-height: 300px;        /* Adjust height as needed */
 }
 .gif-column img {
-  width: 100%; /* Make the image fill the container's width */
-  height: 100%; /* Make the image fill the container's height */
+  max-width: 100%; /* Make the image fill the container's width */
+  max-height: 100%; /* Make the image fill the container's height */
+  height: auto; /* Maintains aspect ratio */
+  width: auto; /* Ensures proportional scaling */
   object-fit: contain; /* Ensure the image covers the container while maintaining its aspect ratio */
   transition: all 0.3s ease; /* Smooth transition effect */
 }
