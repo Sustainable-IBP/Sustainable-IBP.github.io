@@ -142,39 +142,33 @@
     }
 
     /* Update gif-column to ensure the column is square */
-.gif-column { 
-  display: table-cell;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  aspect-ratio: 1/1;
-
-} 
-
-/* Ensure GIF scales properly */
-.gif-column img {
-  max-width: 90%; /* Prevents excessive shrinking */
-  height: auto; /* Maintains aspect ratio */
-  min-width: 150px; /* Ensures visibility on smaller screens */
-  max-height: 400px; /* Prevents excessive stretching */
-  object-fit: contain; /* Keeps the image fully visible */
-  transition: all 0.3s ease; /* Smooth transition effect */
+/* Ensure the GIF column remains in place */
+.gif-column {
+  display: table-cell; /* Keeps it inside the table */
+  text-align: center; /* Centers content in the column */
+  vertical-align: middle; /* Centers vertically */
+  width: 50%; /* Ensures equal column width */
 }
 
-/* Ensure the text column content is vertically centered */
+/* Ensure the GIF inside the column scales properly */
+.gif-column img {
+  max-width: 100%; /* Prevents GIF overflow */
+  height: auto; /* Maintains aspect ratio */
+  max-height: 400px; /* Keeps reasonable size */
+  object-fit: contain; /* Ensures full visibility */
+}
+
+/* Keep bullets aligned and vertically centered */
 .text-column {
   display: table-cell;
-  align-items: center;  /* Vertically centers the bullet points */
-  justify-content: left;  /* Optional: Centers text horizontally */
-  min-height: 300px;        /* Adjust height as needed */
-  height: 100%;  /* Ensures it takes up full row height */
+  vertical-align: middle; /* Centers text vertically */
+  width: 50%; /* Matches column width */
 }
 
-/* Ensure bullets are spaced properly */
+/* Ensure text bullets are styled properly */
 .text-column ul {
-  padding: 0;
-  margin: 0;
-  list-style-position: inside; /* Ensures bullets align well */
+  padding-left: 20px; /* Adds indentation */
+  list-style-type: disc; /* Standard bullet points */
 }
   </style>
 </head>
