@@ -130,6 +130,7 @@
 
     /* Update gif-column to ensure the column is square */
 .gif-column { 
+  display: table-cell;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -137,18 +138,19 @@
 
 } 
 
+/* Ensure GIF scales properly */
 .gif-column img {
-  max-width: 100%; /* Make the image fill the container's width */
-  max-height: 100%; /* Make the image fill the container's height */
+  max-width: 90%; /* Prevents excessive shrinking */
   height: auto; /* Maintains aspect ratio */
-  width: auto; /* Ensures proportional scaling */
-  object-fit: contain; /* Ensure the image covers the container while maintaining its aspect ratio */
+  min-width: 150px; /* Ensures visibility on smaller screens */
+  max-height: 400px; /* Prevents excessive stretching */
+  object-fit: contain; /* Keeps the image fully visible */
   transition: all 0.3s ease; /* Smooth transition effect */
 }
 
 /* Ensure the text column content is vertically centered */
 .text-column {
-  display: flex;
+  display: table-cell;
   align-items: center;  /* Vertically centers the bullet points */
   justify-content: left;  /* Optional: Centers text horizontally */
   min-height: 300px;        /* Adjust height as needed */
