@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hover to Change Text & Gif</title>
+  <!-- Bootstrap 5.3.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Make gif responsive and percentage-based */
+    .gif-column img {
+      width: 10vw; /* 10% of the viewport width */
+      height: 5vh; /* 5% of the viewport height */
+      transition: all 0.3s ease;
+    }
+
+    /* Add some space between bullet points */
+    .bullet-list li {
+      margin-bottom: 10px;
+    }
+
+    /* Additional text row styling */
+    .additional-text {
+      padding-top: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container py-5">
+    <h2>Hover over the bullet points to change text and gif</h2>
+    
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Text</th>
+          <th class="gif-column">GIF</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <ul class="bullet-list">
+              <li><span class="hover-word" data-text="SIBP is more than just a planning discipline—it’s a dynamic management framework that evolves with your organisation’s needs. This approach provides a single, cohesive view across all business functions, enabling your business to operate with a single set of numbers. It allows organisations to pivot quickly while maintaining alignment across all functions, helping them navigate disruptions and complexity with confidence." data-gif="gif1.gif">A Dynamic Framework</span></li>
+              <li><span class="hover-word" data-text="Finance and workforce management cuts across all other functional capabilities, emphasising their critical role in underpinning and interlinking every aspect of business planning. By integrating finance, we ensure that cash flow planning and financial resource allocation are aligned with both immediate operational needs and long-term strategic goals, enhancing overall financial agility and health." data-gif="gif2.gif">Integrating Finance and Workforce Management</span></li>
+              <li><span class="hover-word" data-text="A key differentiator of SIBP is that sustainability management is embedded into every stage of the process. By aligning financial success with eco-conscious and socially responsible practices, inefficiencies are reduced dramatically, opportunities for innovation are opened up, and a competitive edge is achieved. Integrating sustainability ensures businesses meet stakeholder expectations while enhancing brand reputation and market positioning, paving the way for long-term success." data-gif="gif3.gif">Embedding Sustainability</span></li>
+              <li><span class="hover-word" data-text="SIBP fosters a holistic, consensus-driven approach to business management. It unites critical functions—sales, operations, finance, marketing, portfolio, and workforce—into a cohesive planning process. This alignment eliminates inefficiencies caused by siloed decision-making, fostering cross-functional collaboration where every function contributes to shared organisational goals. A unified approach enhances synergy, accountability, and overall business performance." data-gif="gif4.gif">A Holistic and Consensus-Driven Approach</span></li>
+              <li><span class="hover-word" data-text="SIBP strengthens governance by establishing the structure, accountability, and decision-making mechanisms and then enhances it by helping strategies remain relevant and adaptable in today’s volatile and complex world. Organisations can use Sustainable Integrated Business Planning to align strategies and adjust execution plans dynamically in response to shifting market conditions and evolving sustainability priorities." data-gif="gif5.gif">Keeping Strategies Relevant and Adaptable</span></li>
+            </ul>
+          </td>
+          <td class="gif-column">
+            <img id="gif" src="default.gif" alt="default gif">
+          </td>
+        </tr>
+        <!-- Merged row for additional text -->
+        <tr>
+          <td colspan="2" class="additional-text" id="additional-text">
+            <!-- Default additional text when no hover -->
+            Hover over a bullet point to see more information here.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bootstrap 5 JS (Popper.js and Bootstrap Bundle) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    // Define the default text and gif
+    const defaultText = "Hover over a bullet point to see more information here.";
+    const defaultGif = "default.gif";
+    
+    // Elements
+    const hoverWords = document.querySelectorAll('.hover-word');
+    const gifImage = document.getElementById('gif');
+    const additionalTextElement = document.getElementById('additional-text');
+    
+    // Hover events for changing text and gif
+    hoverWords.forEach(word => {
+      word.addEventListener('mouseenter', () => {
+        // Get data attributes for new text and gif
+        const newText = word.getAttribute('data-text');
+        const newGif = word.getAttribute('data-gif');
+        
+        // Update gif and additional info
+        gifImage.src = newGif;
+        additionalTextElement.innerHTML = newText;
+      });
+
+      word.addEventListener('mouseleave', () => {
+        // Restore the original text and gif
+        gifImage.src = defaultGif;
+        additionalTextElement.innerHTML = defaultText;
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainable IBP</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .navbar-custom {
+      background-color: #007BA7;
+    }
+
+    .navbar-brand, .nav-link {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .navbar-custom .navbar-brand .navbar-text {
+      color: white; /* Makes the website name white */
+    }
+
+    .nav-link {
+      color: white;
+    }
+
+    .nav-link:hover, .nav-link:focus, .nav-link.active {
+      color: #FF6600;
+    }
+
+    /* Dropdown menu styling */
+    .navbar-custom .dropdown-menu {
+      background-color: #f8f9fa;; /* Light grey background  */
+    }
+    /* Default dropdown item text will be in the navbar background color (#007BA7) */
+    .navbar-custom .dropdown-menu .dropdown-item {
+      color:  #007BA7           
+      background-color: transparent;
+    }
+    .navbar-custom .dropdown-menu .dropdown-item:hover,
+    .navbar-custom .dropdown-menu .dropdown-item:focus,
+    .navbar-custom .dropdown-menu .dropdown-item.active {
+      background-color: #FF6600; /* Orange background on hover/focus/active */
+      color: white;              /* White text */
+    }
+
+    .hero-section {
+      background: url('images/SIBP-Background.png') no-repeat center center / cover;
+      background-color: #007BA7; /* Fallback color */
+      color: #fff;
+      padding: 100px 0;
+      text-align: center;
+      height: 50%;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .navbar-brand img {
+      margin-right: 10px;
+    }
+
+    .navbar-text {
+      font-size: 1.5rem; /* Larger text size */
+      font-weight: bold; /* Makes the text bold */
+    }
+
+    section {
+      padding: 50px 0;
+    }
+
+    footer {
+      background-color: #007BA7; /* Same as hero section */
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-text {
+        font-size: 1.2rem; /* Smaller font size on smaller screens */
+      }
+    }
+
+    .aubergine-section {
+      background-color: #726E75; /* Grey with aubergine undertones */
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-custom navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <img src="images/SIBP-Logo-white.png" alt="SIBP Logo" height="50">
+        <span class="navbar-text">Sustainable IBP</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" 
+               data-bs-toggle="dropdown" aria-expanded="false">
+              About
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="#aboutSIBP">About SIBP</a></li>
+              <li><a class="dropdown-item" href="#aboutUs">About Us</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#resources">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="hero-section">
+    <div class="container h-100 d-flex flex-column justify-content-center align-items-center">
+      <h1></h1>
+      <p></p>
+    </div>
+  </section>
+
+  <section id="core" class="bg-white">
+    <div class="container">
+      <!-- <h2>About Us</h2> -->
+      <p>
+        <strong><span style="color: #FF6600;">Sustainable Integrated Business Planning (SIBP)</span></strong> 
+        isn’t just our specialty—it’s our philosophy. Our broad, integrated view of sustainability focuses on achieving 
+        long-term success while maintaining the stability and vitality of the wider business ecosystem. Sustainability 
+        goes beyond environmental and social responsibilities—it is a strategic business approach to improve business 
+        operations today without compromising the ability to adapt and thrive in the future. It is about meeting present 
+        business needs while safeguarding resources and opportunities for future growth. Striking this balance is at the 
+        core of building a truly sustainable business.
+      </p>
+    </div>
+  </section>
+
+  <section id="aboutSIBP" class="bg-light">
+    <div class="container">
+      <h2>About SIBP</h2>
+      <h3>What is it?</h3>
+      <p></p>
+    </div>
+  </section>
+
+  <section id="aboutUs" class="bg-light">
+    <div class="container">
+      <h2>About Us</h2>
+      <p></p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>Services</h2>
+      <p>It’s about balancing current effectiveness without jeopardising future potential—this is the essence of a sustainable business.</p>
+    </div>
+  </section>
+
+  <section id="resources" class="bg-light">
+    <div class="container">
+      <h2>Resources</h2>
+      <p>Explore our wide range of resources to understand more about sustainable IBP.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Have any questions? Reach out to us through the following ways.</p>
+      <!-- You can add a contact form or other contact details here -->
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Sustainable IBP. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
