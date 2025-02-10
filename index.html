@@ -1,55 +1,494 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, sans-serif;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainable IBP</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Standard favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .navbar-custom {
+      background-color: #007BA7;
+    }
+
+    .navbar-brand, .nav-link {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .navbar-custom .navbar-brand .navbar-text {
+      color: white; /* Makes the website name white */
+    }
+
+    .nav-link {
+      color: white;
+    }
+
+    .nav-link:hover, .nav-link:focus, .nav-link.active {
+      color: #FF6600;
+    }
+
+    /* Dropdown menu styling */
+    .navbar-custom .dropdown-menu {
+      background-color: #f8f9fa;; /* Light grey background  */
+    }
+    /* Default dropdown item text will be in the navbar background color (#007BA7) */
+    .navbar-custom .dropdown-menu .dropdown-item {
+      color:  #007BA7           
+      background-color: transparent;
+    }
+    .navbar-custom .dropdown-menu .dropdown-item:hover,
+    .navbar-custom .dropdown-menu .dropdown-item:focus,
+    .navbar-custom .dropdown-menu .dropdown-item.active {
+      background-color: #FF6600; /* Orange background on hover/focus/active */
+      color: white;              /* White text */
+    }
+
+    .hero-section {
+      background: url('images/SIBP-Background.png') no-repeat center center / cover;
+      background-color: #007BA7; /* Fallback color */
+      color: #fff;
+      padding: 100px 0;
+      text-align: center;
+      height: 50%;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .navbar-brand img {
+      margin-right: 10px;
+    }
+
+    .navbar-text {
+      font-size: 1.5rem; /* Larger text size */
+      font-weight: bold; /* Makes the text bold */
+    }
+
+    section {
+      padding: 50px 0;
+    }
+
+    footer {
+      background-color: #007BA7; /* Same as hero section */
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+        /* Apply blue background to all h2 elements */
+      h2 {
+        background-color: #007BA7; /* Blue background */
+        color: white; /* White text */
+        padding: 10px 15px; /* Padding to create space around the text */
+        border-radius: 5px; /* Optional: Adds rounded corners */
         }
 
-        .bg-cover {
-            background-color: #f8f9fa;
-            background-image: url('https://via.placeholder.com/1500x1000');
-            background-size: cover;
-            background-position: center;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+        h3 {
+        background-color: whitesmoke; /* Blue background */
+        color: #007BA7; /* Blue text */
+        padding: 10px 15px; /* Padding to create space around the text */
+        border-radius: 5px; /* Optional: Adds rounded corners */
         }
 
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.7);
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        h4 {
+        background-color: whitesmoke; /* Blue background */
+        color: #007BA7; /* Blue text */
+        padding: 10px 15px; /* Padding to create space around the text */
+        border-radius: 5px; /* Optional: Adds rounded corners */
+        font-size: 1.2em; /* Adjust the value to make it slightly smaller than h3 */
         }
 
-        .content {
-            color: white;
-        }
-    </style>
+   /* 🔹 Mobile Adjustments */
+@media (max-width: 768px) {
+  .gif-column {
+    display: block; /* Stack below text on mobile */
+    width: 100%; /* Take full width */
+    text-align: center; /* Keep centered */
+  }
+
+  .gif-column img {
+    max-width: 80%; /* Prevents excessive shrinking */
+    max-height: 250px; /* Keeps a reasonable size */
+  }
+
+  .text-column {
+    display: block; /* Stack text above image */
+    width: 100%;
+  }
+}
+
+    .aubergine-section {
+      background-color: #726E75; /* Grey with aubergine undertones */
+    }
+
+    /* Add some space between bullet points */
+    .bullet-list li {
+      margin-bottom: 10px;
+      color: #007BA7; /* Blue color for headings */
+      font-weight: normal; /* Ensure it's not bold */
+    }
+
+    /* Style only the bullet point headings */
+.blue-bullet-list li span {
+  color: #007BA7; /* Blue color for headings */
+  font-weight: 500; /* Remove bold */
+  font-size: 1em; /* Increase font size slightly */
+}
+
+.blue-bullet-list li::marker {
+  color: #007BA7; /* Blue bullet points */
+  font-size: 1em; /* Slightly larger bullets */
+}
+    /* Additional text row styling */
+    .additional-text {
+      padding-top: 20px;
+      color: #333;
+    }
+
+    /* Update gif-column to ensure the column is square */
+/* Ensure the GIF column remains in place */
+.gif-column {
+  display: table-cell; /* Keeps it inside the table */
+  text-align: center; /* Centers content in the column */
+  vertical-align: middle; /* Centers vertically */
+  width: 70%; /* Ensures equal column width */
+}
+
+/* Ensure the GIF inside the column scales properly */
+.gif-column img {
+  max-width: 100%; /* Prevents GIF overflow */
+  height: auto; /* Maintains aspect ratio */
+  max-height: 400px; /* Keeps reasonable size */
+  object-fit: contain; /* Ensures full visibility */
+}
+
+/* Keep bullets aligned and vertically centered */
+.text-column {
+  display: table-cell;
+  vertical-align: middle; /* Centers text vertically */
+  width: 30%; /* Matches column width */
+}
+
+/* Ensure text bullets are styled properly */
+.text-column ul {
+  padding-left: 20px; /* Adds indentation */
+  list-style-type: disc; /* Standard bullet points */
+}
+
+/* Custom Orange Button */
+.custom-orange-btn {
+    background-color: #FF6600;  /* Replace with your orange accent */
+    color: white;               /* White text */
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.custom-orange-btn:hover,
+.custom-orange-btn:focus {
+    background-color: #cc5200; /* Slightly darker orange on hover */
+    color: white;
+    text-decoration: none;
+}
+  </style>
 </head>
 <body>
-    <div class="bg-cover">
-        <div class="overlay">
-            <div class="content">
-                <h1>Coming Soon</h1>
-                <p>Our website is under construction. Stay tuned for updates!</p>
-            </div>
-        </div>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <nav class="navbar navbar-expand-lg navbar-custom navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <img src="images/SIBP-Logo-white.png" alt="SIBP Logo" height="50">
+        <span class="navbar-text">Sustainable IBP</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" 
+               data-bs-toggle="dropdown" aria-expanded="false">
+              About
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="#aboutSIBP">SIBP</a></li>
+              <li><a class="dropdown-item" href="#aboutUs">Our Approach</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#resources">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="hero-section">
+    <div class="container h-100 d-flex flex-column justify-content-center align-items-center">
+      <h1></h1>
+      <p></p>
+    </div>
+  </section>
+
+  <section id="core" class="bg-white">
+    <div class="container">
+      <!-- <h2>About Us</h2> -->
+      <p>
+        <strong><span style="color: #FF6600;">Sustainable Integrated Business Planning (SIBP)</span></strong> 
+        isn’t just our specialty—it’s our philosophy. Our broad, integrated view of sustainability focuses on achieving 
+        long-term success while maintaining the stability and vitality of the wider business ecosystem. Sustainability 
+        goes beyond environmental and social responsibilities—it is a strategic business approach to improve business 
+        operations today without compromising the ability to adapt and thrive in the future. It is about meeting present 
+        business needs while safeguarding resources and opportunities for future growth. Striking this balance is at the 
+        heart of building a truly sustainable business.
+      </p>
+    </div>
+  </section>
+
+  <section id="aboutSIBP" class="bg-light">
+    <div class="container">
+      <h2>About SIBP</h2>
+      <h3>What is it?</h3> 
+     <!-- <p>Hover over each bullet to see details</p> -->
+      <table class="table table-bordered">
+        <colgroup>
+          <col style="width: 35%;"> <!-- Adjust first column width -->
+          <col style="width: 65%;"> <!-- Adjust second column width -->
+        </colgroup>
+        <!--<thead>
+          <tr>
+            <th>Text</th>
+            <th class="gif-column">GIF</th>
+          </tr>
+        </thead> -->
+        <tbody>
+          <tr>
+            <td class="text-column">
+              <ul class="bullet-list">
+                <p>Hover over each bullet to see details</p>
+                <li><span class="hover-word" data-text="SIBP is more than just a planning discipline—it’s a dynamic management framework that evolves with your organisation’s needs. This approach provides a single, cohesive view across all business functions, enabling your business to operate with a single set of numbers. It allows organisations to pivot quickly while maintaining alignment across all functions, helping them navigate disruptions and complexity with confidence." data-gif="images/DynamicFramework.gif">Dynamic Framework</span></li>
+                <li><span class="hover-word" data-text="Finance and workforce management cuts across all other functional capabilities, emphasising their critical role in underpinning and interlinking every aspect of business planning. By integrating finance, we ensure that cash flow planning and financial resource allocation are aligned with both immediate operational needs and long-term strategic goals, enhancing overall financial agility and health." data-gif="images/IntegratesFinanceAndWorkforce.gif">Finance & Workforce Integration</span></li>
+                <li><span class="hover-word" data-text="A key differentiator of SIBP is that sustainability management is embedded into every stage of the process. By aligning financial success with eco-conscious and socially responsible practices, inefficiencies are reduced dramatically, opportunities for innovation are opened up, and a competitive edge is achieved. Integrating sustainability ensures businesses meet stakeholder expectations while enhancing brand reputation and market positioning, paving the way for long-term success." data-gif="images/EmbedsSustainability.gif">Embedded Sustainability</span></li>
+                <li><span class="hover-word" data-text="SIBP fosters a holistic, consensus-driven approach to business management. It unites critical functions—sales, operations, finance, marketing, portfolio, and workforce—into a cohesive planning process. This alignment eliminates inefficiencies caused by siloed decision-making, fostering cross-functional collaboration where every function contributes to shared organisational goals. A unified approach enhances synergy, accountability, and overall business performance." data-gif="images/HolisticAndConsensusDriven.gif">Holistic & Consensus-Driven</span></li>
+                <li><span class="hover-word" data-text="SIBP strengthens governance by establishing the structure, accountability, and decision-making mechanisms and then enhances it by helping strategies remain relevant and adaptable in today’s volatile and complex world. Organisations can use Sustainable Integrated Business Planning to align strategies and adjust execution plans dynamically in response to shifting market conditions and evolving sustainability priorities." data-gif="images/Adaptable.gif">Adaptive Strategies</span></li>
+              </ul>
+            </td>
+            <td class="gif-column" style="text-align: center;"> <!-- Center the image -->
+              <img id="gif" src="images/SIBPAcrossFunctions.gif" alt="SIBP Across Functions">
+            </td>
+          </tr>
+          <!-- Merged row for additional text -->
+          <tr>
+            <td colspan="2" class="additional-text" id="additional-text">
+              <!-- Default additional text when no hover -->
+              At its core, SIBP is a strategic and execution-focused framework that balances governance—structure, accountability, and control—with agility, adaptability, and continuous optimisation. Effective IBP ensures that governance doesn’t become a bottleneck but instead enables strategic execution in a dynamic business environment
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    <p></p>
+    <h3>Why is it needed?</h3>
+    <h4>Unified Decision-Making</h4>
+<p style="margin-left: 20px;">An integrated approach fosters unified, agile decision-making by providing a single, cohesive view across 
+  all business functions. This alignment ensures that stakeholders—from finance to operations, sales, and
+   sustainability—work with consistent, data-driven insights. Streamlining and formalising decision-making processes
+    strengthens governance while enabling swift, efficient execution in an ever-changing business landscape.
+</p>
+
+<p style="margin-left: 20px;">Governance is strengthened by establishing clear structures, accountability, and decision-making mechanisms to manage the execution of strategy. 
+  With structured processes for aligning financial, operational, and sustainability goals, this framework provides a robust foundation for managing strategy execution:</p>
+
+<ul style="margin-left: 20px;" class="blue-bullet-list">
+  <li><span>Structured Decision-Making</span> – formalised decision-making processes across business functions, ensuring alignment and cohesiveness in data-driven decisions.</li>
+  <li><span>Accountability & Performance Management</span> – by integrating key business functions, SIBP ensures teams are held accountable for meeting business objectives.</li>
+  <li><span>Risk & Compliance Oversight</span> – with SIBP decisions comply with governance policies, regulatory requirements, and risk management frameworks.</li>
+  <li><span>Resource Allocation & Trade-Offs</span> – with processes and tools to prioritise investments and manage trade-offs, Sshort-term performance is balanced with long-term sustainability.</li>
+</ul>
+
+<p style="margin-left: 20px;">In an SIBP environment decision-making is enhanced by introducing flexibility, adaptability, and real-time optimisation. Through advanced analytics and AI-driven insights, businesses can respond quickly to market changes while maintaining alignment with strategic objectives:</p>
+
+<ul style="margin-left: 20px;" class="blue-bullet-list">
+  <li><span>Agility & Adaptability</span> – businesses are more able to pivot quickly, ensuring that governance supports rather than hinders innovation.</li>
+  <li><span>Real-Time Decision Support</span> – AI-driven insights with real-time data helps to optimise decisions and break away from the static nature of traditional governance.</li>
+  <li><span>Cross-Functional Collaboration</span> – eliminating silos enables governance to support seamless strategic execution across departments.</li>
+  <li><span>Continuous Improvement</span> – with feedback loops and analytics, continuous improvement is driven, enhancing both operational efficiency and forecasting accuracy.</li>
+</ul>
+<p></p>
+<h4>Balanced Goals</h4>
+<p style="margin-left: 20px;">This management approach helps organisations maintain a balance between short-term objectives and 
+  long-term strategic aspirations. While achieving immediate financial targets remains essential, working in such a 
+   structured framework ensures that these actions also contribute to long-term growth, resilience, and profitability.
+</p>
+<p style="margin-left: 20px;">
+  For instance, the relationship between financial performance and sustainability goals highlights the combined value of 
+  profitability, reputation, and cost savings. By aligning operational and sustainability decisions, businesses can capitalise on opportunities that strengthen both financial performance and long-term viability. This balance ensures organisations are not just reactive to market pressures but actively building future-ready capabilities.
+</p>
+<p></p>
+<h4>Sustainability Integration</h4>
+<p style="margin-left: 20px;">What makes SIBP truly transformative is that Environmental, Social, and Governance (ESG) criteria are directly embedded into strategy and business planning.
+   Rather than treating sustainability as an isolated objective, with SIBP it is considered alongside financial, operational, and strategic priorities, providing a structured, traceable approach to decision-making.</p>
+
+<p style="margin-left: 20px;">This integration does not mean blindly prioritising sustainability at the expense of other business objectives. Instead, using SIBP organisations evaluate trade-offs transparently, ensuring that decisions—whether for or against a particular sustainability initiative—are well-documented and justified in both the short and long term.</p>
+
+<p style="margin-left: 20px;">By aligning sustainability with business realities, organisations can clearly trace the rationale behind key decisions, whether driven by consumer demand, operational efficiencies, cost structures, or regulatory compliance. This traceability not only improves accountability but also helps businesses remain agile and adaptable in a rapidly evolving world.</p>
+
+<p style="margin-left: 20px;">With Sustainable Integrated Business Planning, organisations can pivot effectively in changing conditions—whether accelerating sustainability-driven initiatives (such as optimising supply chains for lower carbon emissions) or making pragmatic trade-offs when immediate financial, operational, or supply chain constraints require an alternative approach.</p>
+</div>  
+</section>
+
+  <section id="aboutUs" class="bg-light">
+    <div class="container">
+      <h2>Our Approach</h2>
+      <p></p>
+      <h3>Builds on Traditional Planning</h3>
+    <p style="margin-left: 20px;">SIBP is our newest evolutionary step, building on the foundational principles of Sales & Operations Planning and contemporary IBP by extending scope and enhancing capabilities across various dimensions:</p>
+
+    <ul style="margin-left: 20px;"class="blue-bullet-list">
+        <li><span>Scope Expansion:</span> Expands the traditional scope of Sales & Operations Planning from merely aligning supply and demand to integrating all major business processes. This comprehensive approach ensures that sales, marketing, operations, finance, and strategic planning are all aligned, facilitating a unified vision across the organisation.</li>
+        
+        <li><span>Strategic Alignment:</span> Elevates the tactical framework provided by Sales & Operations Planning by aligning these plans with the long-term strategic goals of the organisation. This strategic alignment ensures that every operational decision supports broader business objectives, enhancing long-term resilience and growth.</li>
+        
+        <li><span>Financial Integration and Cash Flow Management:</span> Incorporates robust financial integration, translating operational activities into financial metrics. This integration includes detailed cash flow management, ensuring that operational plans are financially viable and aligned with the organisation’s fiscal health and objectives.</li>
+        
+        <li><span>Advanced Technology and Analytics:</span> Leverages advanced analytics and cutting-edge technologies such as artificial intelligence, offering superior insights and forecasting capabilities beyond traditional Sales and Operations Planning tools. This technological advancement enables more precise decision-making and optimized business performance.</li>
+        
+        <li><span>Sustainability Integration:</span> Integrates environmental and social goals into the core business strategy. This approach aligns with global sustainability standards, such as the United Nations Sustainable Development Goals, making sustainability a core component of business planning and operations.</li>
+        
+        <li><span>Enhancing Organisational Agility:</span> By building on the principles of Sales & Operations Planning, Sustainable Integrated Business Planning not only meets current market demands but also anticipates future challenges, ensuring the organisation is well-prepared and adaptable. This proactive stance fosters a culture of innovation and continuous improvement.</li>
+    </ul>
+    <p></p>
+    <div class="our-methodology">
+      <h3>Methodology</h3>
+      <p style="margin-left: 20px;">SIBP is a cross-organisational process designed to simplify and streamline business operations, resulting in a single, agreed-upon plan that drives continuous improvement across the organisation. Here’s how our methodology unfolds:</p>
+        <!-- Image inserted here, with custom styling for centering and half-width -->
+         <div style="text-align: center; margin: 20px 0;">
+            <img src="images/Pipeline.png" alt="Our Methodology Image" style="width: 50%; max-width: 600px;">
+          </div>
+      <ul style="margin-left: 20px;" class="blue-bullet-list">
+          <li><span>Innovation/Product Management Review:</span> Discuss new products and review existing ones, understanding the product portfolio to make decisions about innovation, design, and development.</li>
+          
+          <li><span>Demand Review:</span> Collaborate across sales, marketing, and other demand-generating functions to create a consensus demand forecast, including statistical forecasts and inputs from sales and marketing.</li>
+          
+          <li><span>Supply/Operations Review:</span> Assess capacity, resources, and inventory levels to ensure the demand plan can be met efficiently.</li>
+          
+          <li><span>Reconciliation Review:</span> Reconcile demand, supply, and product management plans with the financial plan and business strategy to resolve any differences and align plans.</li>
+          
+          <li><span>Alignment/Business Management Review:</span> The senior management team reviews the integrated plans to ensure alignment with strategic objectives, often making trade-off decisions between demand, supply, and financial considerations to finalize the execution plan.</li>
+      </ul>
+      <p style="margin-left: 20px;">This process is cyclical and iterative, occurring monthly, with each cycle feeding into the next, facilitating continuous improvement and starting with the product/innovation review. Sustainability, including criteria and trade-off analysis, is embedded in every stage, ensuring that decisions support not only financial and operational objectives but also sustainable and responsible practices.</p>
+    </div>
+    <div class="engagement-pathway">
+      <h3>Engagement Pathway</h3>
+      <p style="margin-left: 20px;">Our engagement pathway is designed to guide our clients through a seamless journey, from initial consultation to strategic execution. By fostering collaboration and alignment at every stage, we ensure that our clients are empowered to achieve their long-term goals. Here's how we work together:</p>
+      
+      <!-- Full-width image inserted here -->
+      <div style="text-align: center; margin: 20px 0;">
+          <img src="images/EngagementProcess.png" alt="Engagement Pathway Image" style="width: 100%; height: auto;">
+      </div>
+  
+      <p style="margin-left: 20px;">Our approach is collaborative and iterative, ensuring that we continuously align with your business objectives. Through a series of structured reviews, tailored workshops, and expert consultations, we guide you through each phase of the pathway, ensuring your strategy is executed efficiently and effectively.</p>
+  
+      <p style="margin-left: 20px;">We provide the necessary tools, frameworks, and insights that ensure your organisation can make informed decisions, stay adaptable, and build sustainable success. Whether it's through integrated business planning, change management, or innovation support, we are committed to your success every step of the way.</p>
+  </div>
+    </div>
+  </section>
+
+  <section id="resources" class="bg-light">
+    <div class="container">
+      <h2>Resources</h2>
+      <!-- Executive Assessment Tool Download -->
+      <div class="download-section text-center mt-4">
+        <h4>Executive Assessment Tool</h4>
+        <p>
+          This assessment tool has been designed to provide a high-level evaluation of your organisation’s capabilities in Integrated Business Planning (IBP). 
+          It covers key strategic areas such as alignment, forecasting, operational efficiency, sustainability, and market responsiveness. 
+          By objectively assessing these dimensions, you can identify strengths, highlight potential risks, and identify areas for improvement.
+      </p>
+      <p>
+        For a <strong>more in-depth diagnostic and tailored insights</strong>, please <strong>get in touch</strong> with us.
+    </p>
+        <a href="downloads/SIBP Exec Assessment 250203.xlsx" class="btn custom-orange-btn btn-lg" download>
+            <i class="fas fa-file-excel"></i> Download Now
+        </a>
+    </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Have any questions? Reach out to us through the following ways.</p>
+      <!-- You can add a contact form or other contact details here -->
+       <p></p>
+       <p></p>
+       <div class="col-lg-8 col-lg-offset-2 text-center">
+				<a href=" https://www.linkedin.com/showcase/sustainable-ibp/" target="_blank">
+  				      <img src="images/linkedin.png" alt="LinkedIn" />
+				</a>
+				</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Sustainable IBP. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hoverWords = document.querySelectorAll('.hover-word');
+      const gifImage = document.getElementById('gif');
+      const additionalText = document.getElementById('additional-text');
+  
+      // When hovering over a word
+      hoverWords.forEach(function(hoverWord) {
+        hoverWord.addEventListener('mouseover', function() {
+          // Get the GIF source from the data-gif attribute and update the image
+          const gifSource = hoverWord.getAttribute('data-gif');
+          gifImage.src = gifSource;
+  
+          // Change the text content of the 'additional-text' element
+          const hoverText = hoverWord.getAttribute('data-text');
+          additionalText.textContent = hoverText;
+        });
+      });
+  
+      // When mouse leaves the hover word
+      hoverWords.forEach(function(hoverWord) {
+        hoverWord.addEventListener('mouseout', function() {
+          // Reset the image to the default
+          gifImage.src = 'images/SIBPAcrossFunctions.gif'; // Set your default gif path here
+          
+          // Reset the additional text to its default message
+          additionalText.textContent = 'At its core, SIBP is a strategic and execution-focused framework that balances governance—structure, accountability, and control—with agility, adaptability, and continuous optimisation. Effective IBP ensures that governance doesn’t become a bottleneck but instead enables strategic execution in a dynamic business environment';
+        });
+      });
+    });
+  </script>
 </body>
 </html>
