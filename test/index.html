@@ -213,6 +213,36 @@
     color: white;
     text-decoration: none;
 }
+
+/* Contact Us Section */
+.contact-section {
+    background-color: #f8f9fa; /* Light background */
+    padding: 50px 0;
+}
+
+.contact-icons {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between icons */
+}
+
+.contact-icon img {
+    width: 40;  /* Ensure both icons have the same width */
+    height: 40px; /* Ensure both icons have the same height */
+    object-fit: contain; /* Maintain aspect ratio without distortion */
+    transition: transform 0.3s ease;
+}
+
+.contact-icon img:hover {
+    transform: scale(1.1); /* Slight hover effect */
+}
+
+.contact-info {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+}
   </style>
 </head>
 <body>
@@ -447,15 +477,20 @@
   <section id="contact">
     <div class="container">
       <h2>Contact Us</h2>
-      <p>Have any questions? Reach out to us through the following ways.</p>
-      <!-- You can add a contact form or other contact details here -->
-       <p></p>
-       <p></p>
-       <div class="col-lg-8 col-lg-offset-2 text-center">
-				<a href=" https://www.linkedin.com/showcase/sustainable-ibp/" target="_blank">
-  				      <img src="images/linkedin.png" alt="LinkedIn" />
-				</a>
-				</div>
+      <p>We'd love to hear from you. Please reach out via email or message us via our LinkedIn page.</p>
+
+        <div class="contact-icons">
+            <!-- Email Button -->
+            <a href="mailto:info@sustainable-ibp.com" class="contact-icon" aria-label="Email Us">
+                <img src="images/mail.png" alt="Email Icon">
+            </a>
+
+            <!-- LinkedIn Button -->
+            <a href="https://www.linkedin.com/showcase/sustainable-ibp/" target="_blank" class="contact-icon" aria-label="Message Us on LinkedIn">
+                <img src="images/linkedin.png" alt="LinkedIn Icon">
+            </a>
+        </div>
+
     </div>
   </section>
 
