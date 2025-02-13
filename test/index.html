@@ -10,56 +10,65 @@
 
   gtag('config', 'G-74GQEHWKY9');
 </script>
+<!-- Webpage Schema markup-->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Sustainable IBP",
+    "url": "https://www.sustainable-ibp.com",
+    "description": "Our broad, integrated view of sustainability focuses on achieving long-term success while maintaining the stability and vitality of the wider business ecosystem. Sustainability goes beyond environmental and social responsibilities—it is a strategic business approach to improve business operations today without compromising the ability to adapt and thrive in the future. It is about meeting present business needs while safeguarding resources and opportunities for future growth. Striking this balance is at the heart of building a truly sustainable business.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sustainable IBP",
+      "url": "https://www.sustainable-ibp.com",
+      "logo": "https://www.sustainable-ibp.com/images/SIBP-Logo-white.png"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Sustainable Integrated Business Planning",
+      "alternateName": "SIBP",
+      "description": "A governance-driven framework integrating financial, operational, and sustainability goals to mitigate emerging risks, manage disruptions, and enhance long-term business resilience.",
+      "keywords": ["sustainability", "risk management", "business resilience", "corporate governance", "supply chain sustainability", "disruption management"]
+    },
+    "mainEntity": {
+      "@type": "WebPageElement",
+      "name": "Strengthening Governance",
+      "description": "SIBP strengthens governance by establishing clear structures, accountability, and decision-making mechanisms. This ensures businesses can proactively manage disruptions, mitigate emerging risks, and maintain long-term resilience."
+    },
+    "hasPart": [
+      {
+        "@type": "WebPageElement",
+        "name": "Enhancing Governance",
+        "description": "SIBP enhances governance by ensuring decision-making remains agile and adaptable. By aligning operational strategies with long-term business goals, organisations can navigate uncertainties while maintaining compliance with regulatory and sustainability standards."
+      },
+      {
+        "@type": "WebPageElement",
+        "name": "Managing Disruptions",
+        "description": "Through predictive analytics, real-time data, and AI-driven insights, SIBP enables businesses to anticipate and manage disruptions effectively. This proactive approach ensures continuity, optimised decision-making, and operational resilience in volatile markets."
+      },
+      {
+        "@type": "WebPageElement",
+        "name": "Mitigating Emerging Risks",
+        "description": "SIBP integrates risk management strategies to identify and mitigate emerging risks, safeguarding financial sustainability, operational efficiency, and long-term viability."
+      }
+    ]
+  }
+  </script>
+  <!--end webpage schema markup-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sustainable IBP</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Latest Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!--Font support-->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!--SIBP custom Stylesheet-->
+  <link rel="stylesheet" href="css/SIBPstyle.css">
   <!-- Standard favicon -->
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <style>
-    body, html {
-      height: 100%;
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    .navbar-custom {
-      background-color: #007BA7;
-    }
-
-    .navbar-brand, .nav-link {
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    .navbar-custom .navbar-brand .navbar-text {
-      color: white; /* Makes the website name white */
-    }
-
-    .nav-link {
-      color: white;
-    }
-
-    .nav-link:hover, .nav-link:focus, .nav-link.active {
-      color: #FF6600;
-    }
-
-    /* Dropdown menu styling */
-    .navbar-custom .dropdown-menu {
-      background-color: #f8f9fa;; /* Light grey background  */
-    }
-    /* Default dropdown item text will be in the navbar background color (#007BA7) */
-    .navbar-custom .dropdown-menu .dropdown-item {
-      color:  #007BA7           
-      background-color: transparent;
-    }
-    .navbar-custom .dropdown-menu .dropdown-item:hover,
-    .navbar-custom .dropdown-menu .dropdown-item:focus,
-    .navbar-custom .dropdown-menu .dropdown-item.active {
-      background-color: #FF6600; /* Orange background on hover/focus/active */
-      color: white;              /* White text */
-    }
-
+    /* see SIBPstyle.css */
     .hero-section {
       background: url('images/SIBP-Background.png') no-repeat center center / cover;
       background-color: #007BA7; /* Fallback color */
@@ -68,181 +77,6 @@
       text-align: center;
       height: 50%;
     }
-
-    .navbar-brand {
-      display: flex;
-      align-items: center;
-      white-space: nowrap;
-    }
-
-    .navbar-brand img {
-      margin-right: 10px;
-    }
-
-    .navbar-text {
-      font-size: 1.5rem; /* Larger text size */
-      font-weight: bold; /* Makes the text bold */
-    }
-
-    section {
-      padding: 50px 0;
-    }
-
-    footer {
-      background-color: #007BA7; /* Same as hero section */
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-    }
-
-        /* Apply blue background to all h2 elements */
-      h2 {
-        background-color: #007BA7; /* Blue background */
-        color: white; /* White text */
-        padding: 10px 15px; /* Padding to create space around the text */
-        border-radius: 5px; /* Optional: Adds rounded corners */
-        }
-
-        h3 {
-        background-color: whitesmoke; /* Blue background */
-        color: #007BA7; /* Blue text */
-        padding: 10px 15px; /* Padding to create space around the text */
-        border-radius: 5px; /* Optional: Adds rounded corners */
-        }
-
-        h4 {
-        background-color: whitesmoke; /* Blue background */
-        color: #007BA7; /* Blue text */
-        padding: 10px 15px; /* Padding to create space around the text */
-        border-radius: 5px; /* Optional: Adds rounded corners */
-        font-size: 1.2em; /* Adjust the value to make it slightly smaller than h3 */
-        }
-
-   /* 🔹 Mobile Adjustments */
-@media (max-width: 768px) {
-  .gif-column {
-    display: block; /* Stack below text on mobile */
-    width: 100%; /* Take full width */
-    text-align: center; /* Keep centered */
-  }
-
-  .gif-column img {
-    max-width: 80%; /* Prevents excessive shrinking */
-    max-height: 250px; /* Keeps a reasonable size */
-  }
-
-  .text-column {
-    display: block; /* Stack text above image */
-    width: 100%;
-  }
-}
-
-    .aubergine-section {
-      background-color: #726E75; /* Grey with aubergine undertones */
-    }
-
-    /* Add some space between bullet points */
-    .bullet-list li {
-      margin-bottom: 10px;
-      color: #007BA7; /* Blue color for headings */
-      font-weight: normal; /* Ensure it's not bold */
-    }
-
-    /* Style only the bullet point headings */
-.blue-bullet-list li span {
-  color: #007BA7; /* Blue color for headings */
-  font-weight: 500; /* Remove bold */
-  font-size: 1em; /* Increase font size slightly */
-}
-
-.blue-bullet-list li::marker {
-  color: #007BA7; /* Blue bullet points */
-  font-size: 1em; /* Slightly larger bullets */
-}
-    /* Additional text row styling */
-    .additional-text {
-      padding-top: 20px;
-      color: #333;
-    }
-
-    /* Update gif-column to ensure the column is square */
-/* Ensure the GIF column remains in place */
-.gif-column {
-  display: table-cell; /* Keeps it inside the table */
-  text-align: center; /* Centers content in the column */
-  vertical-align: middle; /* Centers vertically */
-  width: 70%; /* Ensures equal column width */
-}
-
-/* Ensure the GIF inside the column scales properly */
-.gif-column img {
-  max-width: 100%; /* Prevents GIF overflow */
-  height: auto; /* Maintains aspect ratio */
-  max-height: 400px; /* Keeps reasonable size */
-  object-fit: contain; /* Ensures full visibility */
-}
-
-/* Keep bullets aligned and vertically centered */
-.text-column {
-  display: table-cell;
-  vertical-align: middle; /* Centers text vertically */
-  width: 30%; /* Matches column width */
-}
-
-/* Ensure text bullets are styled properly */
-.text-column ul {
-  padding-left: 20px; /* Adds indentation */
-  list-style-type: disc; /* Standard bullet points */
-}
-
-/* Custom Orange Button */
-.custom-orange-btn {
-    background-color: #FF6600;  /* Replace with your orange accent */
-    color: white;               /* White text */
-    border: none;
-    padding: 12px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
-}
-
-.custom-orange-btn:hover,
-.custom-orange-btn:focus {
-    background-color: #cc5200; /* Slightly darker orange on hover */
-    color: white;
-    text-decoration: none;
-}
-
-/* Contact Us Section */
-.contact-section {
-    background-color: #f8f9fa; /* Light background */
-    padding: 50px 0;
-}
-
-.contact-icons {
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between icons */
-}
-
-.contact-icon img {
-    width: 40;  /* Ensure both icons have the same width */
-    height: 40px; /* Ensure both icons have the same height */
-    object-fit: contain; /* Maintain aspect ratio without distortion */
-    transition: transform 0.3s ease;
-}
-
-.contact-icon img:hover {
-    transform: scale(1.1); /* Slight hover effect */
-}
-
-.contact-info {
-    font-size: 1rem;
-    color: #333;
-    margin-top: 10px;
-}
   </style>
 </head>
 <body>
@@ -500,9 +334,10 @@
     </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script> -->
+  <!-- Latest Bootstrap 5.3.3 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const hoverWords = document.querySelectorAll('.hover-word');
