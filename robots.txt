@@ -1,0 +1,19 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /test/
+Disallow: /wp-admin/ 
+Allow: /wp-admin/admin-ajax.php
+
+# Prevent indexing of duplicate and low-value pages
+Disallow: /search
+Disallow: /?s=
+Disallow: /tag/
+Disallow: /category/
+
+# Allow all other pages to be crawled
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.sustainable-ibp.com/sitemap.xml
